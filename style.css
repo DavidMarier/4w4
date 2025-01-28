@@ -21,6 +21,7 @@ Bases
 a {
   text-decoration: none;
   color: #5a5;
+  font-family: "Roboto", sans-serif;
 }
 a:hover {
   color: rgba(0, 0, 0, 0.7);
@@ -53,7 +54,7 @@ Les composants
     flex-direction: column;
     justify-content: flex-end;
     text-align: center;
-    gap: 20px 0;
+    gap: 1rem 0;
   }
 }
 .menu__a {
@@ -154,21 +155,26 @@ body {
   display: flex;
 }
 .hero__contenu {
+  font-size: 20px;
   display: flex;
   flex: 0 1 auto;
   flex-direction: column;
   margin-left: 2rem;
-  gap: 20px 0;
+  gap: 10px 0;
 }
 .hero__titre {
   font-size: 3rem;
 }
+.hero__telephone {
+  font-family: "Roboto", sans-serif;
+}
 .hero__bouton {
   width: 8rem;
-  height: 2rem;
+  height: 2.5rem;
   border-style: none;
   border-radius: 5px;
   background-color: rgba(255, 255, 255, 0.5);
+  font-family: "Roboto", sans-serif;
 }
 .hero__bouton:hover {
   cursor: pointer;
@@ -178,7 +184,19 @@ body {
 }
 @media screen and (max-width: 700px) {
   .hero__description {
-    max-width: 60vw;
+    max-width: 80vw;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .galerie {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .promotion {
+    display: none;
   }
 }
 
@@ -193,7 +211,7 @@ body {
   .burger {
     display: block;
     position: absolute;
-    top: 10px;
+    top: 80px;
     right: 10px;
     z-index: 99;
   }

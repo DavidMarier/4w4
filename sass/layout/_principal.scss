@@ -13,21 +13,26 @@ body{
     display: flex;
     
     &__contenu{
+        font-size: 20px;
         display: flex;
         flex: 0 1 auto;
         flex-direction: column;
         margin-left: 2rem;
-        gap: 20px 0;
+        gap: 10px 0;
     }
     &__titre{
         font-size: 3rem;
     }
+    &__telephone{
+        font-family: "Roboto", sans-serif;
+    }
     &__bouton{
         width: 8rem;
-        height: 2rem;
+        height: 2.5rem;
         border-style: none;
         border-radius: 5px;
         background-color: rgba(255, 255, 255, 0.5);
+        font-family: "Roboto", sans-serif;
     }
     &__bouton:hover{
         cursor: pointer;
@@ -35,8 +40,20 @@ body{
     &__description{
         max-width: 30vw;
         @media screen and (max-width: $point__rupture){
-            max-width: 60vw;
+            max-width: 80vw;
         }
+    }
+}
+
+.galerie{
+    @media screen and (max-width: $point__rupture){
+        display: none;
+    }
+}
+
+.promotion{
+    @media screen and (max-width: $point__rupture){
+        display: none;
     }
 }
 
