@@ -10,4 +10,38 @@ body{
 .hero{
     min-height: 100vh;
     background-image: url("images/maldives.jpg");
+    display: flex;
+    
+    &__contenu{
+        display: flex;
+        flex: 0 1 auto;
+        flex-direction: column;
+        margin-left: 2rem;
+        gap: 20px 0;
+    }
+    &__titre{
+        font-size: 3rem;
+    }
+    &__bouton{
+        width: 8rem;
+        height: 2rem;
+        border-style: none;
+        border-radius: 5px;
+        background-color: rgba(255, 255, 255, 0.5);
+    }
+    &__bouton:hover{
+        cursor: pointer;
+    }
+    &__description{
+        max-width: 30vw;
+        @media screen and (max-width: $point__rupture){
+            max-width: 60vw;
+        }
+    }
 }
+
+.social:hover{
+    cursor: pointer;
+}
+
+
