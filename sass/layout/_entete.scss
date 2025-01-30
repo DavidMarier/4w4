@@ -3,7 +3,7 @@
     @media screen and (max-width: $point__rupture){
         display: block;
         position: absolute;
-        top: 80px;
+        top: 40px;
         right: 10px;
         z-index: 99;
     }
@@ -39,5 +39,8 @@
             width: 100vw;
             height: 80%;
           }
+    }
+    &__logo{
+        z-index: 100;
     }
 }
