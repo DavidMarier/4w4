@@ -1,15 +1,46 @@
+.burger{
+    display: none;
+    @media screen and (max-width: $point__rupture){
+        display: block;
+        position: absolute;
+        top: 40px;
+        right: 10px;
+        z-index: 99;
+    }
+}
+.chk__burger:checked ~ .entete__nav{
+    display: flex;
+}
+
+.chk__burger{
+    display: none;
+}
+
 .entete{
     display: flex;
     justify-content: space-between;
     align-items: center;
     &__nav{
         display: flex;
+        justify-content: flex-end;
         column-gap: 2rem;
         align-items: center;
         flex-direction: row;
         flex-wrap: wrap;
         @media screen and (max-width: $point__rupture) {
+            display: none;
             flex-direction: column;
+            padding-bottom: 20px;
+            gap: 30px 0;
+            position: absolute;
+            top: 0;
+            right: 0;
+            background-color: rgb(255, 250, 245);
+            width: 100vw;
+            height: 80%;
           }
+    }
+    &__logo{
+        z-index: 100;
     }
 }
