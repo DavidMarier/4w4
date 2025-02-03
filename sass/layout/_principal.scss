@@ -59,6 +59,19 @@ body{
     }
 }
 
+.carte{
+    &__image{
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        justify-content: center;
+    }
+    &__image > img{
+        width: calc(20% - 10px);
+        object-fit: cover;
+    }
+}
+
 .social:hover{
     cursor: pointer;
 }
@@ -66,7 +79,7 @@ body{
 .inscription{
     font-family: "Roboto", sans-serif;
     position: absolute;
-    top: 65%;
+    top: 52%;
     left: 10%;
     background-color: rgb(255, 250, 245);
     display: flex;
@@ -87,8 +100,9 @@ body{
         margin-right: 2px;
     }
     &__bouton{
-        width: 8rem;
-        height: 2.5rem;
+        width: 14rem;
+        height: 2rem;
+        border-color: #00ffe1;
     }
     &__bouton:hover{
         cursor: pointer;
