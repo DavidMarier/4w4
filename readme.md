@@ -5,3 +5,5 @@ Créer une page d'accueil en utilisant le standard BEM et Sass pour reproduire l
 Auteur: Eddy Martin
 
 ## https://davidmarier.github.io/4w4/
+
+## https://gftnth00.mywhc.ca/4w4_45/
