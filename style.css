@@ -1,50 +1,46 @@
 @charset "UTF-8";
 /*
-Theme Name: 4W4 - Eddy Martin
+Theme Name: club-voyage
 Theme URI: https://referenced.ca
 Author: Eddy Martin
 Author URI: https://github.com/eddytuto
-Description: Thème de base développer dans le cadre du cours 4W4
+Description: Thème de base développer dans le cadre du cours de Worpress
 Version: 1.0
 Tested up to: 6.2
 Requires PHP: 7.0
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
-Text Domain: 4w4-eddy
+Text Domain: club-voyage
 */
 /* /////////////////////
 Les Variables
 //////////////////////// */
 /* /////////////////////
-Bases
+Base
 //////////////////////// */
 a {
-  text-decoration: none;
   color: #5a5;
-  font-family: "Roboto", sans-serif;
+  text-decoration: none;
 }
 a:hover {
-  color: rgba(0, 0, 0, 0.7);
+  color: rgba(0, 0, 0, 0.1);
 }
 a:visited {
   color: rgba(0, 0, 0, 0.3);
 }
 a:focus {
-  color: rgba(0, 0, 0, 0.5);
-}
-@media screen and (max-width: 700px) {
-  a {
-    font-size: x-large;
-  }
+  color: rgba(0, 0, 0, 0.4);
 }
 
 /* /////////////////////////
 Les composants
 /////////////////////////// */
+/* /////////////////////////////////////////// menu principal */
 .menu {
   flex: 1 1 50%;
   display: flex;
   flex-direction: row;
+  justify-content: flex-end;
   margin: 0;
   padding: 0;
   list-style-type: none;
@@ -52,14 +48,10 @@ Les composants
 @media screen and (max-width: 700px) {
   .menu {
     flex-direction: column;
-    justify-content: flex-end;
-    text-align: center;
-    gap: 1rem 0;
+    gap: 6px 0;
   }
 }
-.menu__a {
-  color: #333;
-  text-decoration: none;
+.menu-item a {
   padding: 2px 5px;
 }
 
@@ -70,6 +62,7 @@ Le composant .carte
   border: 1px solid #ddd;
   padding: 20px;
   border-radius: 8px;
+  flex: 1 1 220px;
 }
 .carte--grande {
   padding: 40px;
@@ -106,18 +99,23 @@ Le composant .carte
 .carte__bouton:hover {
   background-color: #0056b3;
 }
+.carte .post-categories {
+  list-style-type: none;
+  display: flex;
+  gap: 3px;
+}
+.carte .post-categories a {
+  text-decoration: none;
+}
 
 .recherche {
-  border: 1px solid rgba(0, 0, 0, 0.1);
-  height: 2rem;
   display: flex;
   align-items: center;
   font-size: 1.2rem;
-  margin-right: 2px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
 }
 .recherche__input {
   flex: 1;
-  padding: 0;
   height: 1.8rem;
   border: none;
   outline: none;
@@ -131,20 +129,10 @@ Le composant .carte
   flex: 0 0 20px;
   padding: 0 3px;
 }
-@media screen and (max-width: 700px) {
-  .recherche {
-    display: none;
-  }
-}
 
 /* /////////////////////////
-Layout
+Layout 
 /////////////////////////// */
-body {
-  background-color: rgb(255, 250, 245);
-  position: relative;
-}
-
 .global {
   margin: 0 auto;
   max-width: 1000px;
@@ -153,109 +141,13 @@ body {
 .hero {
   min-height: 100vh;
   background-image: url("images/maldives.jpg");
-  display: flex;
-}
-.hero__contenu {
-  font-size: 20px;
-  display: flex;
-  flex: 0 1 auto;
-  flex-direction: column;
-  margin-left: 2rem;
-  gap: 10px 0;
-}
-.hero__titre {
-  font-size: 3rem;
-  text-shadow: 2px 2px #00ffe1;
-}
-.hero__telephone {
-  font-family: "Roboto", sans-serif;
-}
-.hero__bouton {
-  width: 8rem;
-  height: 2.5rem;
-  border-style: none;
-  border-radius: 5px;
-  background-color: rgba(255, 255, 255, 0.5);
-  font-family: "Roboto", sans-serif;
-}
-.hero__bouton:hover {
-  cursor: pointer;
-}
-.hero__description {
-  max-width: 30vw;
-}
-@media screen and (max-width: 700px) {
-  .hero__description {
-    max-width: 80vw;
-  }
 }
 
-@media screen and (max-width: 700px) {
-  .galerie {
-    display: none;
-  }
-}
-
-@media screen and (max-width: 700px) {
-  .promotion {
-    display: none;
-  }
-}
-
-.carte__image {
+.boiteflex {
   display: flex;
   flex-wrap: wrap;
+  justify-content: space-between;
   gap: 10px;
-  justify-content: center;
-}
-.carte__image > img {
-  width: calc(20% - 10px);
-  object-fit: cover;
-}
-
-.social:hover {
-  cursor: pointer;
-}
-
-.inscription {
-  font-family: "Roboto", sans-serif;
-  position: absolute;
-  top: 52%;
-  left: 10%;
-  background-color: rgb(255, 250, 245);
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  align-items: center;
-  width: 80%;
-  height: 7%;
-  margin: 30px auto;
-  box-shadow: 2px 2px 2px #9a9a9a;
-}
-.inscription__formulaire {
-  display: flex;
-  flex-direction: column;
-  justify-content: end;
-  margin: 30px 0;
-  height: 2rem;
-  font-size: 1.2rem;
-  margin-right: 2px;
-}
-.inscription__bouton {
-  width: 14rem;
-  height: 2rem;
-  border-color: #00ffe1;
-}
-.inscription__bouton:hover {
-  cursor: pointer;
-}
-.inscription__input {
-  border-color: #00ffe1;
-}
-@media screen and (max-width: 700px) {
-  .inscription {
-    display: none;
-  }
 }
 
 .burger {
@@ -265,18 +157,18 @@ body {
   .burger {
     display: block;
     position: absolute;
-    top: 40px;
+    top: 10px;
     right: 10px;
     z-index: 99;
   }
 }
 
-.chk__burger:checked ~ .entete__nav {
-  display: flex;
-}
-
 .chk__burger {
   display: none;
+}
+
+.chk__burger:checked ~ .entete__nav {
+  display: flex;
 }
 
 .entete {
@@ -287,27 +179,25 @@ body {
 .entete__nav {
   display: flex;
   justify-content: flex-end;
-  column-gap: 2rem;
-  align-items: center;
+  position: static;
   flex-direction: row;
+  align-items: center;
+  gap: 0 40px;
   flex-wrap: wrap;
 }
 @media screen and (max-width: 700px) {
   .entete__nav {
     display: none;
     flex-direction: column;
+    height: 52vh;
+    width: 100vw;
     padding-bottom: 20px;
     gap: 30px 0;
     position: absolute;
     top: 0;
     right: 0;
-    background-color: rgb(255, 250, 245);
-    width: 100vw;
-    height: 80%;
+    background-color: #fff;
   }
-}
-.entete__logo {
-  z-index: 100;
 }
 
 /*

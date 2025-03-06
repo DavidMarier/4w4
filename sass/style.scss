@@ -1,15 +1,15 @@
 /*
-Theme Name: 4W4 - Eddy Martin
+Theme Name: club-voyage
 Theme URI: https://referenced.ca
 Author: Eddy Martin
 Author URI: https://github.com/eddytuto
-Description: Thème de base développer dans le cadre du cours 4W4
+Description: Thème de base développer dans le cadre du cours de Worpress
 Version: 1.0
 Tested up to: 6.2
 Requires PHP: 7.0
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
-Text Domain: 4w4-eddy
+Text Domain: club-voyage
 */
 
 /* /////////////////////
@@ -19,11 +19,10 @@ Les Variables
 @import "variables/dimensions";
 
 /* /////////////////////
-Bases
+Base
 //////////////////////// */
-@import "base/lien";
 @import "base/simple";
-
+@import "base/lien";
 /* /////////////////////////
 Les composants
 /////////////////////////// */
@@ -32,10 +31,8 @@ Les composants
 @import "composants/recherche";
 
 /* /////////////////////////
-Layout
+Layout 
 /////////////////////////// */
 @import "layout/principal";
 @import "layout/entete";
 @import "layout/footer";
-
-
