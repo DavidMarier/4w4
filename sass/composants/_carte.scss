@@ -6,6 +6,7 @@ Le composant .carte
     border: 1px solid #ddd;
     padding: 20px;
     border-radius: 8px;
+    flex : 1 1 220px;
     
   
     &--grande {
@@ -14,7 +15,6 @@ Le composant .carte
     &--petite {
       padding: 20px;
     }
-  
     &__image img {
       max-width: 100%;
       border-radius: 8px;
@@ -48,6 +48,14 @@ Le composant .carte
   
       &:hover {
         background-color: #0056b3;
+      }
+    }
+    & .post-categories {
+      list-style-type: none;
+      display: flex;
+      gap : 3px;
+      a {
+        text-decoration: none;
       }
     }
   }
