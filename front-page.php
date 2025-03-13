@@ -9,7 +9,7 @@
 <?php  
 $hero_auteur = get_theme_mod('hero_auteur', 'Default Title'); 
 $hero_background = get_theme_mod('hero_background', 'Default Title'); 
-$couleur = substr(get_theme_mod('couleur', 'Default Title'), 1);
+$couleur = get_theme_mod('couleur', 'Default Title');
 $hero_courriel = get_theme_mod('hero_courriel', 'Default Title');
 ?>
     <section class="hero" style="background-image: url('<?php echo $hero_background ?>'); background-repeat: no-repeat" >
