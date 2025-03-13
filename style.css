@@ -140,7 +140,7 @@ Layout
 
 .hero {
   min-height: 100vh;
-  background-image: url("images/maldives.jpg");
+  background-repeat: no-repeat;
 }
 
 .boiteflex {
@@ -204,7 +204,7 @@ Layout
   --------------------------------- Layout du pied de page
 */
 footer {
-  background-color: rgb(236, 136, 13);
+  background-color: rgb(255, 192, 114);
   color: #000;
 }
 
