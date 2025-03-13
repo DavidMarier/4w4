@@ -9,13 +9,20 @@
 
     <div class="piedpage global">
         <section class="piedpage__s1">
-         
+
+            <div class="piedpage__liens">
                 <?php wp_nav_menu(array(
-                    "menu"=> "externe",
-                    "container" => "nav",
-                    "container_class" => "piedpage__s1__externe"
-                )); ?>
-    
+                        "menu"=> "externe",
+                        "container" => "nav",
+                        "container_class" => "piedpage__s1__externe"
+                    )); ?>
+                <br>
+                <?php wp_nav_menu(array(
+                        "menu"=> "principal",
+                        "container" => "nav",
+                        "container_class" => "piedpage__s1__externe"
+                    )); ?>
+            </div>
 
             <div class="piedpage__s1__adresse">
                 <div class="piedpage__s1__adresse__coord">
