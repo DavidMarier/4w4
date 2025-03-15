@@ -53,9 +53,10 @@ Le composant .carte
     & .post-categories {
       list-style-type: none;
       display: flex;
-      gap : 3px;
+      gap : 12px;
       a {
         text-decoration: none;
+        font-family: 'Sriracha', sans-serif;
       }
     }
   }

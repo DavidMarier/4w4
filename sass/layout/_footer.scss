@@ -3,33 +3,47 @@
 */
 
 footer{
-    background-color: rgb(255, 192, 114); // devrait devenir une variable de couleur
-    color : #000;  // variable !!
+    background-color: rgb(255, 192, 114);
+    color : #000;
   }
   
-  .piedpage{
-      display: flex;
-      flex-direction: column;
-      &__s1{
-          display: flex;
-          flex-wrap: wrap;
-          gap: 3rem;
-          &__externe {
-              flex : 0 0 20%;
-              & .menu { //ul
-                  display : flex;
-                  flex-direction: column;
-              }
-  
-  
-          }
-          &__adresse{
-              flex : 0 0 40%;
-              &__coord{}
-              &__recherche{}
-          }
-          &__description{
-              flex:1 0 300px;
-          }
-      }
+.piedpage{
+    display: flex;
+    flex-direction: column;
+    
+    flex: 1;
+    &__s1{
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 3rem;
+        &__externe {
+            flex : 0 0 20%;
+            & .menu { //ul
+                display : flex;
+                flex-direction: column;
+            }
+        }
+        &__adresse{
+            flex : 0 0 40%;
+            &__coord{}
+            &__recherche{}
+        }
+        &__description{
+            flex:1 0 300px;
+        }
+        font-family: 'Merienda', sans-serif;
+    }
+    &__liens{
+    font-family: 'Sriracha', sans-serif;
+    }
   }
+
+.piedpage__s2{
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    &__liens{
+        font-family: 'Sriracha', sans-serif;
+    }
+}

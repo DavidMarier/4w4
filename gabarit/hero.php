@@ -19,6 +19,6 @@ $hero_courriel = get_theme_mod('hero_courriel', 'Default Title');
             Inscription
         </button>
         <?php get_template_part('gabarit/icone-sociaux'); ?>
-        <p class="hero__auteur">Auteur:<?php echo $hero_auteur;  ?></p>
+        <p class="hero__auteur">Auteur: <?php echo $hero_auteur;  ?></p>
     </div>
 </section>

@@ -5,6 +5,7 @@
 
 .hero{
     margin: 0;
+    font-size: 20px;
     min-height: 100vh;
     background-repeat: no-repeat ;
     &__contenu{
@@ -12,9 +13,11 @@
         flex-direction: column;
         row-gap: 1rem;
         justify-content: space-between;
+        margin-left: 10px;
     }
     &__titre{
         margin: 0;
+        margin-top: 20px;
     }
     &__description{
         margin: 0;
@@ -23,13 +26,19 @@
         margin: 0;
     }
     &__bouton{
-        width: 5rem;
+        background-color: white;
+        border: none;
+        font: inherit;
+        cursor: pointer;
+        width: 8rem;
+        border-radius: 15px;
     }
+    font-family: 'Merienda', sans-serif;
 }
 
 .boiteflex {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    gap : 10px;
+    font-family: 'Kite One', sans-serif;
 }
