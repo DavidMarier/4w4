@@ -5,13 +5,14 @@
 footer{
     background-color: rgb(255, 192, 114);
     color : #000;
+    display: flex;
   }
   
 .piedpage{
+    margin : 0 auto;
+    max-width: 1000px;
     display: flex;
     flex-direction: column;
-    
-    flex: 1;
     &__s1{
         display: flex;
         justify-content: center;

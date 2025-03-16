@@ -7,7 +7,7 @@
     ?>
 
 
-    <div class="piedpage global">
+    <div class="piedpage">
         <section class="piedpage__s1">
 
             <div class="piedpage__liens">
@@ -17,7 +17,6 @@
                         "container_class" => "piedpage__s1__externe"
                     )); ?>
             </div>
-
             <div class="piedpage__s1__adresse">
                 <div class="piedpage__s1__adresse__coord">
                     <?= $footer_adresse ?>
@@ -47,3 +46,23 @@
     </div>
 </footer>
 <?php wp_footer() ?>
+
+<script>
+
+function ajusterFooter() {
+    const footer = document.querySelector("footer");
+
+    const hauteurBody = document.body.offsetHeight;
+    const hauteurFenetre = window.innerHeight;
+
+    const espace = hauteurFenetre - hauteurBody;
+
+    if (espace > 0) {
+        footer.style.marginTop = `${espace}px`;
+    } 
+}
+
+window.addEventListener("load", ajusterFooter);
+window.addEventListener("resize", ajusterFooter);
+
+</script>

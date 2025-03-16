@@ -109,6 +109,11 @@ Le composant .carte
   font-family: "Sriracha", sans-serif;
 }
 
+.populaire {
+  flex: 1;
+  font-family: "Kite One", sans-serif;
+}
+
 .recherche {
   display: flex;
   align-items: center;
@@ -134,6 +139,11 @@ Le composant .carte
 /* /////////////////////////
 Layout 
 /////////////////////////// */
+body {
+  display: flex;
+  flex-direction: column;
+}
+
 .global {
   margin: 0 auto;
   max-width: 1000px;
@@ -236,12 +246,14 @@ Layout
 footer {
   background-color: rgb(255, 192, 114);
   color: #000;
+  display: flex;
 }
 
 .piedpage {
+  margin: 0 auto;
+  max-width: 1000px;
   display: flex;
   flex-direction: column;
-  flex: 1;
 }
 .piedpage__s1 {
   display: flex;
