@@ -285,4 +285,11 @@ footer {
 }
 .piedpage__s2__liens {
   font-family: "Sriracha", sans-serif;
+}
+
+.erreur {
+  margin: 0;
+  font-size: 20px;
+  min-height: 100vh;
+  font-family: "Merienda", sans-serif;
 }/*# sourceMappingURL=style.css.map */
