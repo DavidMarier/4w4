@@ -86,6 +86,32 @@
         'type' => 'text',
       ));
 
+      ////////////////////////////////////////////////////////////// Nouvelle section Erreur
+      $wp_customize->add_section('erreur_section', array(
+        'title' => __('Erreur Section', 'theme_31w'),
+        'priority' => 30,
+      ));
+
+      $wp_customize->add_setting('erreur_titre', array(
+        'default' => __('Titre', 'theme_31w'),
+        'sanitize_callback' => 'sanitize_text_field'
+      ));
+      $wp_customize->add_control('erreur_titre', array(
+        'label' => __('Titre', 'theme_31w'),
+        'section' => 'erreur_section',
+        'type' => 'text',
+      ));
+
+      $wp_customize->add_setting('erreur_description', array(
+        'default' => __('Description', 'theme_31w'),
+        'sanitize_callback' => 'sanitize_text_field'
+      ));
+      $wp_customize->add_control('erreur_description', array(
+        'label' => __('Description', 'theme_31w'),
+        'section' => 'erreur_section',
+        'type' => 'text',
+      ));
+
       }
       
       add_action('customize_register', 'theme_31w_customize_register');
