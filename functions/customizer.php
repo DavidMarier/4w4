@@ -120,6 +120,24 @@
         'label' => __('Image en background', 'theme_31w'),
         'section' => 'erreur_section',
       )));
+      // Couleur du texte
+      $wp_customize->add_setting('erreur_couleur', array(
+        'default' => '',
+        'sanitize_callback' => 'esc_url_raw',
+      ));
+      $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize, 'erreur_couleur', array(
+        'label' => __('Couleur du texte', 'theme_31w'),
+        'section' => 'erreur_section',
+      )));
+      // Couleur des boutons et recherche
+      $wp_customize->add_setting('erreur_bouton', array(
+        'default' => '',
+        'sanitize_callback' => 'esc_url_raw',
+      ));
+      $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize, 'erreur_bouton', array(
+        'label' => __('Couleur des boutons', 'theme_31w'),
+        'section' => 'erreur_section',
+      )));
 
       }
       

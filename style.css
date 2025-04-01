@@ -140,9 +140,11 @@ Le composant .carte
   align-items: center;
   font-size: 2rem;
   border: 1px solid rgba(0, 0, 0, 0.1);
+  margin-top: 20px;
 }
 .recherche-erreur__input {
   flex: 1;
+  font-size: 2rem;
   height: 3rem;
   width: 24rem;
   border: none;
@@ -324,11 +326,9 @@ footer {
 }
 .erreur__titre {
   font-size: 5rem;
-  color: rgb(255, 200, 0);
   background-color: rgba(255, 255, 255, 0.2);
 }
 .erreur__description {
-  color: rgb(255, 200, 0);
   background-color: rgba(255, 255, 255, 0.2);
 }
 .erreur__menu ul li a {
