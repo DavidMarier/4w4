@@ -150,13 +150,9 @@ Le composant .carte
   border: none;
   outline: none;
   background-color: rgba(0, 0, 0, 0.02);
-  border-bottom: 2px solid yellow;
 }
 .recherche-erreur__input:hover {
   background-color: rgba(0, 0, 0, 0.06);
-}
-.recherche-erreur__input::placeholder {
-  color: yellow;
 }
 
 /* /////////////////////////
@@ -336,7 +332,6 @@ footer {
 }
 .erreur__accueil {
   font-size: 2.5rem;
-  background-color: yellow;
   color: rgb(125, 189, 232);
   margin: 20px 0;
   border-radius: 5px;
@@ -353,7 +348,6 @@ footer {
 }
 
 #menu-erreur li {
-  background-color: yellow;
   display: flex;
   align-items: center;
   border-radius: 5px;
