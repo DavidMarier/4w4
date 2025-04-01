@@ -6,7 +6,7 @@
     $erreur_couleur2 = get_theme_mod('erreur_bouton', '#fff200');
 ?>
 
-<section class="erreur" style="background-image: url('<?php echo $erreur_background ?>'); background-repeat: no-repeat">
+<section class="erreur" style="background-image: url('<?php echo $erreur_background ?>'); background-repeat: no-repeat;">
     <div class="erreur__contenu">
         <h1 class="erreur__titre" style="color: <?php echo $erreur_couleur ?>;">
             <?= $erreur_titre ?>

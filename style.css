@@ -140,7 +140,7 @@ Le composant .carte
   align-items: center;
   font-size: 2rem;
   border: 1px solid rgba(0, 0, 0, 0.1);
-  margin-top: 20px;
+  margin-top: 50px;
 }
 .recherche-erreur__input {
   flex: 1;
