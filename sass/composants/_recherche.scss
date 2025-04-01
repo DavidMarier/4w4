@@ -20,3 +20,24 @@
      
     }
 }
+.recherche-erreur{
+    display : flex;
+    align-items: center;
+    font-size: 2rem;
+    border : 1px solid rgba(0,0,0,0.1);
+    &__input{
+        flex: 1;
+        height: 3rem;
+        width: 24rem;
+        border : none;
+        outline: none;
+        background-color: rgba(0,0,0,.02);
+        &:hover{
+            background-color: rgba(0,0,0,.06);
+        }
+        border-bottom : 2px solid yellow;
+    }
+    &__input::placeholder{
+        color: yellow;
+    }
+}

@@ -135,6 +135,28 @@ Le composant .carte
   padding: 0 3px;
 }
 
+.recherche-erreur {
+  display: flex;
+  align-items: center;
+  font-size: 2rem;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+}
+.recherche-erreur__input {
+  flex: 1;
+  height: 3rem;
+  width: 24rem;
+  border: none;
+  outline: none;
+  background-color: rgba(0, 0, 0, 0.02);
+  border-bottom: 2px solid yellow;
+}
+.recherche-erreur__input:hover {
+  background-color: rgba(0, 0, 0, 0.06);
+}
+.recherche-erreur__input::placeholder {
+  color: yellow;
+}
+
 /* /////////////////////////
 Layout 
 /////////////////////////// */
@@ -289,7 +311,50 @@ footer {
 
 .erreur {
   margin: 0;
-  font-size: 20px;
   min-height: 100vh;
   font-family: "Merienda", sans-serif;
+  text-align: center;
+}
+.erreur__contenu {
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 50vw;
+}
+.erreur__titre {
+  font-size: 5rem;
+  color: rgb(255, 200, 0);
+  background-color: rgba(255, 255, 255, 0.2);
+}
+.erreur__description {
+  color: rgb(255, 200, 0);
+  background-color: rgba(255, 255, 255, 0.2);
+}
+.erreur__menu ul li a {
+  margin: 5px 10px 5px 10px;
+}
+.erreur__accueil {
+  font-size: 2.5rem;
+  background-color: yellow;
+  color: rgb(125, 189, 232);
+  margin: 20px 0;
+  border-radius: 5px;
+}
+.erreur__accueil:visited {
+  color: rgb(125, 189, 232);
+}
+
+#menu-erreur {
+  font-size: 2rem;
+  display: flex;
+  justify-content: space-around;
+  column-gap: 20px;
+}
+
+#menu-erreur li {
+  background-color: yellow;
+  display: flex;
+  align-items: center;
+  border-radius: 5px;
 }/*# sourceMappingURL=style.css.map */
