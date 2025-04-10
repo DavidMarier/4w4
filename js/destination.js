@@ -3,10 +3,12 @@
     
         let categoryId = 3; // Remplacez par l'ID de la catégorie souhaitée
         const domaine = window.location.href
+
         //const apiUrl = `${domaine}wp-json/wp/v2/posts?categories=${categoryId}`;
         let apiUrl =  `${domaine}wp-json/wp/v2/posts?categories=${categoryId}`;
         const categorie__ul__li = document.querySelectorAll(".categorie__ul__li")
         console.log("categorie__ul__li.length", categorie__ul__li.length)
+
         categorie__ul__li.forEach(li => {
             li.addEventListener("click",function(){
                console.log(li.dataset.id) 
@@ -16,11 +18,15 @@
             })
             
         })
+        
+
+
         fetch(apiUrl)
             .then(response => response.json())
             .then(data => {
                 //  <div>${article.excerpt.rendered}</div>
                 const destinationList = document.querySelector('.destination__list');
+
                 data.forEach(article => {
                     const articleElement = document.createElement('div');
                     articleElement.innerHTML = `
