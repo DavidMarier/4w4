@@ -9,11 +9,11 @@
 
 <?php get_template_part('gabarit/hero'); ?>
 
-    <section class="galerie">
+    <!-- <section class="galerie">
         <figure class="galerie__fig">
             <img src="" alt="">
         </figure>
-    </section>
+    </section> -->
  
 
     <section class="populaire">
