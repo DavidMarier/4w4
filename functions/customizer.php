@@ -28,18 +28,17 @@
       ));
       
       ////////////////////////////////////////////////// image en background de la zone hero
-      for($k = 0; $k < 3; $k++)
-      {
-        $wp_customize->add_setting('hero_background', array(
-          'default' => '',
-          'sanitize_callback' => 'esc_url_raw',
+      for ($k = 0; $k < 3; $k++) {
+        $wp_customize->add_setting("hero_background_$k", array(
+            'default' => '',
+            'sanitize_callback' => 'esc_url_raw',
         ));
-        
-        $wp_customize->add_control(new WP_Customize_Image_Control($wp_customize, 'hero_background', array(
-          'label' => __('Image en background', 'theme_31w'),
-          'section' => 'hero_section',
+    
+        $wp_customize->add_control(new WP_Customize_Image_Control($wp_customize, "hero_background_$k", array(
+            'label' => sprintf(__('Image en background %d', 'theme_31w'), $k + 1),
+            'section' => 'hero_section',
         )));
-      }
+    }
       ////////////////////////////////////////////////// couleur du texte de la zone hero
       $wp_customize->add_setting('hero_couleur', array(
         'default' => '',
