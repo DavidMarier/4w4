@@ -22,28 +22,21 @@ $hero_background[$k] = get_theme_mod('hero_background_' . $k, 'Default Title');
                 type="radio" 
                 name="carrousel" 
                 data-id_carrousel="<?php echo $index; ?>" 
-                <?php echo $index == 0 ? 'checked="checked"' : ''; ?>
             >
         <?php endforeach; ?>
     </div>
     <!-- ///////////////////////////////////////////////// hero__contenu -->
     <div class="hero__contenu global">
+    <?php for ($i = 0; $i < $nombreImages; $i++): ?>
         <div class="hero__animation">
             <h1 class="hero__titre">
-                <?php  bloginfo('name'); ?>
+                Club de voyages
             </h1>
             <p class="hero__description">
-            <?php  bloginfo('description'); ?>
+                Des voyages cools
             </p>
         </div>
-        <div class="hero__animation">
-            <h1 class="hero__titre">
-                Lorem ipsum dolor sit amet.
-            </h1>
-            <p class="hero__description">
-                Lorem ipsum dolor sit amet, consectetur adipisicing.
-            </p>
-        </div>
+    <?php endfor; ?>
         <a href="" class="hero__courriel">
             <?php echo $hero_courriel;  ?></p>
         </a>
