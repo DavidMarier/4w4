@@ -38,7 +38,7 @@
             'label' => sprintf(__('Image en background %d', 'theme_31w'), $k + 1),
             'section' => 'hero_section',
         )));
-    }
+      }
       ////////////////////////////////////////////////// couleur du texte de la zone hero
       $wp_customize->add_setting('hero_couleur', array(
         'default' => '',

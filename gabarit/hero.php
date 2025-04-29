@@ -6,19 +6,24 @@ $hero_courriel = get_theme_mod('hero_courriel', 'Default Title');
 for ($k=0; $k<3; $k++){
 $hero_background[$k] = get_theme_mod('hero_background_' . $k, 'Default Title'); 
 }
-// utiliesr boucle pour faire images et boutons carrousel
 ?>
 <section class="hero">
     <!-- ///////////////////////////////////////////////// hero__carrousel -->
-    <div class="hero__carrousel"  style="background-image: url('<?php echo $hero_background[0] ?>');"></div>    
-    <div class="hero__carrousel"  style="background-image: url('<?php echo $hero_background[1] ?>');"></div> 
-    <div class="hero__carrousel"  style="background-image: url('<?php echo $hero_background[2] ?>');"></div>
+    <?php foreach ($hero_background as $index => $background): ?>
+        <div class="hero__carrousel" style="background-image: url('<?php echo esc_url($background); ?>');"></div>
+    <?php endforeach; ?>
+
     <div class="hero__radio">
-        <input class="hero__radio__input" type="radio" name="carrousel" data-id_carrousel="0"  checked="checked">
-        <input class="hero__radio__input" type="radio" name="carrousel" data-id_carrousel="1">
-        <input class="hero__radio__input" type="radio" name="carrousel" data-id_carrousel="2">
-    </div> 
-    
+        <?php foreach ($hero_background as $index => $background): ?>
+            <input 
+                class="hero__radio__input" 
+                type="radio" 
+                name="carrousel" 
+                data-id_carrousel="<?php echo $index; ?>" 
+                <?php echo $index == 0 ? 'checked="checked"' : ''; ?>
+            >
+        <?php endforeach; ?>
+    </div>
     <!-- ///////////////////////////////////////////////// hero__contenu -->
     <div class="hero__contenu global">
         <div class="hero__animation">
@@ -27,14 +32,6 @@ $hero_background[$k] = get_theme_mod('hero_background_' . $k, 'Default Title');
             </h1>
             <p class="hero__description">
             <?php  bloginfo('description'); ?>
-            </p>
-        </div>
-        <div class="hero__animation">
-            <h1 class="hero__titre">
-                Lorem ipsum dolor sit amet.
-            </h1>
-            <p class="hero__description">
-                Lorem ipsum dolor sit amet, consectetur adipisicing.
             </p>
         </div>
         <div class="hero__animation">
