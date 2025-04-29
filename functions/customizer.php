@@ -28,7 +28,9 @@
       ));
       
       ////////////////////////////////////////////////// image en background de la zone hero
-      for ($k = 0; $k < 3; $k++) {
+      $nombreImages = get_theme_mod('nombre_images', 3);
+      
+      for ($k = 0; $k < $nombreImages; $k++) {
         $wp_customize->add_setting("hero_background_$k", array(
             'default' => '',
             'sanitize_callback' => 'esc_url_raw',
@@ -38,6 +40,25 @@
             'label' => sprintf(__('Image en background %d', 'theme_31w'), $k + 1),
             'section' => 'hero_section',
         )));
+      }
+
+      /// nombre d'images dans le carrousel
+      $wp_customize->add_setting( 'nombre_images', array(
+        'capability' => 'edit_theme_options',
+        'sanitize_callback' => 'absint',
+        'default' => $nombreImages,
+      ) );
+      
+      $wp_customize->add_control( 'nombre_images', array(
+        'type' => 'number',
+        'section' => 'hero_section',
+        'label' => __( 'Custom Number' ),
+        'description' => __( 'This is a custom number.' ),
+      ) );
+
+      function nombre_images( $number, $setting ) {
+        $number = absint( $number );
+        return ( $number ? $number : $setting->default );
       }
       ////////////////////////////////////////////////// couleur du texte de la zone hero
       $wp_customize->add_setting('hero_couleur', array(

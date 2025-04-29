@@ -2,8 +2,10 @@
 $hero_auteur = get_theme_mod('hero_auteur', 'Default Title'); 
 $couleur = get_theme_mod('couleur', 'Default Title');
 $hero_courriel = get_theme_mod('hero_courriel', 'Default Title');
+$nombreImages = get_theme_mod('nombre_images', 3);
 
-for ($k=0; $k<3; $k++){
+
+for ($k=0; $k<$nombreImages; $k++){
 $hero_background[$k] = get_theme_mod('hero_background_' . $k, 'Default Title'); 
 }
 ?>
