@@ -52,8 +52,7 @@
       $wp_customize->add_control( 'nombre_images', array(
         'type' => 'number',
         'section' => 'hero_section',
-        'label' => __( 'Custom Number' ),
-        'description' => __( 'This is a custom number.' ),
+        'label' => __( 'Nombre' ),
       ) );
 
       function nombre_images( $number, $setting ) {
@@ -77,6 +76,17 @@
           'title' => __('Section pied de page', 'theme_31w'),
           'priority' => 30,
       ));
+
+      //// image du footer
+
+      $wp_customize->add_setting('footer_background', array(
+        'default' => '',
+        'sanitize_callback' => 'esc_url_raw',
+      ));
+      $wp_customize->add_control(new WP_Customize_Image_Control($wp_customize, 'footer_background', array(
+        'label' => __('Image en background', 'theme_31w'),
+        'section' => 'footer_section',
+      )));
       ////////////////////////////////////////////////////////// Champ mission
       $wp_customize->add_setting('footer_mission', array(
         'default' => __('Mission du club de voyage', 'theme_31w'),

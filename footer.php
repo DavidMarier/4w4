@@ -3,6 +3,7 @@
     $footer_mission = get_theme_mod('footer_mission', 'Default Title');
     $footer_adresse = get_theme_mod('footer_adresse', 'Default Title');
     $footer_telephone = get_theme_mod('footer_telephone', 'Default Title');
+    $footer_image = get_theme_mod('footer_background', 'Default Title');
     
     ?>
 
