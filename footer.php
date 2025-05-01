@@ -6,10 +6,10 @@
     
     ?>
 
-<footer style="background-image: url('<?php echo esc_url($footer_image); ?>');">
+<footer>
     <div class="piedpage">
         <section class="piedpage__s1">
-
+            <img class="image__footer" src="<?php echo esc_url($footer_image); ?>" alt="">
             <div class="piedpage__liens">
                 <?php wp_nav_menu(array(
                         "menu"=> "externe",

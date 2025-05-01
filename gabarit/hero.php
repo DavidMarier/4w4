@@ -27,7 +27,6 @@ $hero_backgrounds[$k] = get_theme_mod('hero_background_' . $k, 'Default Title');
                     class="hero__radio__input" 
                     type="radio" 
                     name="carrousel" 
-                    data-id_carrousel="<?php echo $index; ?>" 
                 >
             </label>
         <?php endforeach; ?>
