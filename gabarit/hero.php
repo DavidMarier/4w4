@@ -3,7 +3,12 @@ $hero_auteur = get_theme_mod('hero_auteur', 'Default Title');
 $couleur = get_theme_mod('couleur', 'Default Title');
 $hero_courriel = get_theme_mod('hero_courriel', 'Default Title');
 $nombre_images = get_theme_mod('nombre_images', 3);
+$nombre_icones = get_theme_mod('nombre_icones', 4);
 
+for ($k = 0; $k < $nombre_icones; $k++) {
+    $section_sociale_image[$k] = get_theme_mod("section_sociale_image_$k", '');
+    $section_sociale_lien[$k] = get_theme_mod("section_sociale_lien_$k", '');
+} 
 
 for ($k=0; $k<$nombre_images; $k++){
 $hero_backgrounds[$k] = get_theme_mod('hero_background_' . $k, 'Default Title'); 
@@ -17,12 +22,14 @@ $hero_backgrounds[$k] = get_theme_mod('hero_background_' . $k, 'Default Title');
 
     <div class="hero__radio">
         <?php foreach ($hero_backgrounds as $background): ?>
-            <input 
-                class="hero__radio__input" 
-                type="radio" 
-                name="carrousel" 
-                data-id_carrousel="<?php echo $index; ?>" 
-            >
+            <label for="">
+                <input 
+                    class="hero__radio__input" 
+                    type="radio" 
+                    name="carrousel" 
+                    data-id_carrousel="<?php echo $index; ?>" 
+                >
+            </label>
         <?php endforeach; ?>
     </div>
     <!-- ///////////////////////////////////////////////// hero__contenu -->
@@ -44,10 +51,11 @@ $hero_backgrounds[$k] = get_theme_mod('hero_background_' . $k, 'Default Title');
             Inscription
         </button>
         <div class="hero__icone-app">
-            <img src="https://s2.svgbox.net/social.svg?ic=facebook&color=000000" width="20" height="20">
-            <img src="https://s2.svgbox.net/social.svg?ic=linkedin&color=000000" width="20" height="20">
-            <img src="https://s2.svgbox.net/social.svg?ic=paypal&color=000000" width="20" height="20">
-            <img src="https://s2.svgbox.net/social.svg?ic=stackoverflow&color=000000" width="20" height="20">
+            <?php for ($i = 0; $i< $nombre_icones; $i++): ?>
+                <a href="<?php echo esc_url($section_sociale_lien[$i]); ?>">
+                    <img src="<?php echo esc_url($section_sociale_image[$i]); ?>" alt="icone">
+                </a>
+            <?php endfor; ?>
         </div>
         <p>Auteur:<?php echo $hero_auteur;  ?></p>
         </div>

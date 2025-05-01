@@ -1,5 +1,4 @@
-<footer>
-    <?php
+<?php
     $footer_mission = get_theme_mod('footer_mission', 'Default Title');
     $footer_adresse = get_theme_mod('footer_adresse', 'Default Title');
     $footer_telephone = get_theme_mod('footer_telephone', 'Default Title');
@@ -7,7 +6,7 @@
     
     ?>
 
-
+<footer style="background-image: url('<?php echo esc_url($footer_image); ?>');">
     <div class="piedpage">
         <section class="piedpage__s1">
 

@@ -55,9 +55,9 @@
         'label' => __( 'Nombre' ),
       ) );
 
-      function nombre_images( $number, $setting ) {
-        $number = absint( $number );
-        return ( $number ? $number : $setting->default );
+      function nombre_images( $nombre, $setting ) {
+        $nombre = absint( $nombre );
+        return ( $nombre ? $nombre : $setting->default );
       }
       ////////////////////////////////////////////////// couleur du texte de la zone hero
       $wp_customize->add_setting('hero_couleur', array(
@@ -69,6 +69,51 @@
         'label' => __('Couleur du texte', 'theme_31w'),
         'section' => 'hero_section',
       )));
+
+      ////////////////////////////////////////////////// icônes sociales
+      $nombre_icones = get_theme_mod('nombre_icones', 4);
+
+      for ($k = 0; $k < $nombre_icones; $k++) {
+        $wp_customize->add_setting("section_sociale_image_$k", array(
+            'default' => '',
+            'sanitize_callback' => 'esc_url_raw',
+        ));
+    
+        $wp_customize->add_control(new WP_Customize_Image_Control($wp_customize, "section_sociale_image_$k", array(
+            'label' => sprintf(__('Icônes sociales (Image) %d', 'theme_31w'), $k + 1),
+            'section' => 'hero_section',
+        )));
+    
+        $wp_customize->add_setting("section_sociale_lien_$k", array(
+            'default' => '',
+            'sanitize_callback' => 'esc_url_raw',
+        ));
+    
+        $wp_customize->add_control("section_sociale_lien_$k", array(
+            'label' => sprintf(__('Icônes sociales (Lien) %d', 'theme_31w'), $k + 1),
+            'section' => 'hero_section',
+            'type' => 'url',
+        ));
+    }
+
+      ////// nombre d'icônes sociales
+      $wp_customize->add_setting( 'nombre_icones', array(
+        'capability' => 'edit_theme_options',
+        'sanitize_callback' => 'absint',
+        'default' => $nombre_icones,
+      ) );
+      
+      $wp_customize->add_control( 'nombre_icones', array(
+        'type' => 'number',
+        'section' => 'hero_section',
+        'label' => __( 'Nombre' ),
+      ) );
+
+      function nombre_icones( $nombre, $setting ) {
+        $nombre = absint( $nombre );
+        return ( $nombre ? $nombre : $setting->default );
+      }
+
       
       //////////////////////////////////////////////////////// Nouvelle section footer
       
