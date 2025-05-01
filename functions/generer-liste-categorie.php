@@ -25,3 +25,8 @@ function categories_liste($parent_slug){
     } 
     }    
 }
+
+function categorie_par_destination($cat_a_retirer){
+    
+
+}
