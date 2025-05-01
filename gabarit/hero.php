@@ -6,8 +6,8 @@ $nombre_images = get_theme_mod('nombre_images', 3);
 $nombre_icones = get_theme_mod('nombre_icones', 4);
 
 for ($k = 0; $k < $nombre_icones; $k++) {
-    $section_sociale_image[$k] = get_theme_mod("section_sociale_image_$k", '');
-    $section_sociale_lien[$k] = get_theme_mod("section_sociale_lien_$k", '');
+    $section_sociale_image[$k] = get_theme_mod("section_sociale_image_".$k, '');
+    $section_sociale_lien[$k] = get_theme_mod("section_sociale_lien_".$k, '');
 } 
 
 for ($k=0; $k<$nombre_images; $k++){
