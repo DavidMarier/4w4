@@ -17,7 +17,7 @@
             parcourir_carrousel();
             parcourir_animation();
             hero__carrousel[index].classList.add("hero__carrousel--active");
-            hero__animation[index].style.display = "block";
+            hero__animation[index].classList.add("hero__animation--active");
             elm.checked = true;
         });
     });
@@ -30,7 +30,7 @@
 
     function parcourir_animation() {
         hero__animation.forEach((elm) => {
-            elm.style.display = "none";
+            elm.classList.remove("hero__animation--active");
         });
     }
 

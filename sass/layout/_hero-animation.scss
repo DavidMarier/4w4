@@ -1,4 +1,11 @@
+// Animation de la section hero
 .hero{
+    &__animation{
+        display: none;
+        &--active{
+            display: block;
+        }
+    }
     &__titre, &__description{
         position: relative;
         animation: anim_contenu 2s cubic-bezier(.44,.23,.51,1.43) forwards;

@@ -2,21 +2,21 @@
 $hero_auteur = get_theme_mod('hero_auteur', 'Default Title'); 
 $couleur = get_theme_mod('couleur', 'Default Title');
 $hero_courriel = get_theme_mod('hero_courriel', 'Default Title');
-$nombreImages = get_theme_mod('nombre_images', 3);
+$nombre_images = get_theme_mod('nombre_images', 3);
 
 
-for ($k=0; $k<$nombreImages; $k++){
-$hero_background[$k] = get_theme_mod('hero_background_' . $k, 'Default Title'); 
+for ($k=0; $k<$nombre_images; $k++){
+$hero_backgrounds[$k] = get_theme_mod('hero_background_' . $k, 'Default Title'); 
 }
 ?>
 <section class="hero">
     <!-- ///////////////////////////////////////////////// hero__carrousel -->
-    <?php foreach ($hero_background as $index => $background): ?>
+    <?php foreach ($hero_backgrounds as $background): ?>
         <div class="hero__carrousel" style="background-image: url('<?php echo esc_url($background); ?>');"></div>
     <?php endforeach; ?>
 
     <div class="hero__radio">
-        <?php foreach ($hero_background as $index => $background): ?>
+        <?php foreach ($hero_backgrounds as $background): ?>
             <input 
                 class="hero__radio__input" 
                 type="radio" 
@@ -27,13 +27,13 @@ $hero_background[$k] = get_theme_mod('hero_background_' . $k, 'Default Title');
     </div>
     <!-- ///////////////////////////////////////////////// hero__contenu -->
     <div class="hero__contenu global">
-    <?php for ($i = 0; $i < $nombreImages; $i++): ?>
+    <?php for ($i = 0; $i < $nombre_images; $i++): ?>
         <div class="hero__animation">
             <h1 class="hero__titre">
-                Club de voyages
+                <?php bloginfo("name"); ?>
             </h1>
             <p class="hero__description">
-                Des voyages cools
+                <?php bloginfo("description"); ?>
             </p>
         </div>
     <?php endfor; ?>

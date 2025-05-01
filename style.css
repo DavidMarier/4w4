@@ -381,6 +381,12 @@ footer {
   justify-content: center;
   gap: 2rem;
 }
+.hero__animation {
+  display: none;
+}
+.hero__animation--active {
+  display: block;
+}
 .hero__titre, .hero__description {
   position: relative;
   animation: anim_contenu 2s cubic-bezier(0.44, 0.23, 0.51, 1.43) forwards;
