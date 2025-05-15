@@ -25,8 +25,18 @@ function categories_liste($parent_slug){
     } 
     }    
 }
-
-function categorie_par_destination($cat_a_retirer){
-    
-
+function categorie_par_destination($cat_a_retirer = '') {
+    $categories = get_the_category();
+    if (!empty($categories)) {
+        echo '<ul class="post-categories">';
+        foreach ($categories as $categorie) {
+            if (strtolower($categorie->name) !== strtolower($cat_a_retirer)) {
+                $lien = get_category_link($categorie->term_id);
+                echo '<li><a href="' . esc_url($lien) . '">' . esc_html($categorie->name) . '</a></li>';
+            }
+        }
+        echo '</ul>';
+    }
 }
+?>
+

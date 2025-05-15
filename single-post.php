@@ -20,6 +20,7 @@
             <p>Date de publication : <?php echo get_the_date(); ?></p>
         </div>
     </section>
+    <?php generer_vague("#0099ff"); ?>
     <?php get_footer(); ?>
    
 </body>
