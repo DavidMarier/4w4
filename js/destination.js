@@ -20,8 +20,9 @@
             
         })
 
-        function mon_fetch(apiUrl)
+        function mon_fetch(categoryId)
         {
+        apiUrl = `${domaine}/wp-json/wp/v2/posts?categories=${categoryId}`;
         fetch(apiUrl)
             .then(response => response.json())
             .then(data => {
@@ -40,6 +41,5 @@
                 });
             })
             .catch(error => console.error('Erreur lors de la récupération des articles:', error));
-        }
-
+        }  
 })()

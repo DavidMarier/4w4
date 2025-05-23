@@ -6,6 +6,7 @@
     <title>4W4-Voyage</title>
     <!-- link rel="stylesheet" href="normalize.css" -->
     <!-- link rel="stylesheet" href="style.css" -->
+     <base href="<?php echo esc_url(home_url('/'));?>">
     <link href="https://fonts.googleapis.com/css2?family=Kite+One&family=Merienda:wght@300..900&family=Sriracha&display=swap" rel="stylesheet">
     <?php wp_head(); ?> 
 </head>

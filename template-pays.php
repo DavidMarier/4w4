@@ -4,6 +4,11 @@ Template Name: Pays
 */
 //evenement
 ?>
+<style>
+    body {
+        background-color: #d9f9ff;
+    }
+</style>
 <?php get_header(); ?>
     <section class="populaire">
         <div class="global">
@@ -23,4 +28,41 @@ Template Name: Pays
             <?php endwhile; endif; ?>
         </div>
     </section>
+<?php generer_vague("#84eaff ", "#d9f9ff "); ?>
+
+<section class="menu-pays">
+    <div class="global">
+        <ul class="menu-pays__liste">
+        <?php
+            $pays = [
+                "france" => "France",
+                "etats-unis" => "États-Unis",
+                "canada" => "Canada",
+                "argentine" => "Argentine",
+                "chili" => "Chili",
+                "belgique" => "Belgique",
+                "maroc" => "Maroc",
+                "mexique" => "Mexique",
+                "japon" => "Japon",
+                "italie" => "Italie",
+                "islande" => "Islande",
+                "chine" => "Chine",
+                "grece" => "Grèce",
+                "suisse" => "Suisse"
+            ];
+            ?>
+            <?php foreach ($pays as $slug => $nom) : ?>
+                <li class="menu-pays__item">
+                    <button class="menu-pays__bouton" data-pays="<?php echo esc_attr($slug); ?>">
+                        <?php echo esc_html($nom); ?>
+                    </button>
+                </li>
+        <?php endforeach; ?>
+        </ul>
+    </div>
+</section>
+
+
+
+<?php generer_vague2("#84eaff ", "#d9f9ff"); ?>
 <?php get_footer(); ?>

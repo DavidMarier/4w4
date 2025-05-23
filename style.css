@@ -208,6 +208,43 @@ body {
   font-family: "Kite One", sans-serif;
 }
 
+.menu-pays__liste {
+  display: flex;
+  gap: 1rem;
+  list-style: none;
+  padding: 0;
+}
+
+.menu-pays__bouton {
+  padding: 0.5rem 1rem;
+  background-color: #0073aa;
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.menu-pays__bouton:hover {
+  background-color: #005177;
+}
+
+.destinations .destination {
+  margin-bottom: 2rem;
+  padding: 1rem;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+.destination__title {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.destination__content {
+  font-size: 1rem;
+  color: #555;
+}
+
 .burger {
   display: none;
 }

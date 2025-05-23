@@ -37,6 +37,7 @@
                     "container" => "nav",
                     "container_class" => "piedpage__s2__principal"
                 )); ?>
+                Lien vers le dépôt github : <a href="https://github.com/DavidMarier/4w4/tree/tp2">Github</a> 
             </div>
         </section>
       

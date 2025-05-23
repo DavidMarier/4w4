@@ -39,7 +39,7 @@
         <div class="destination__list"></div>
     </section>
 
-    <?php generer_vague("#0099ff"); ?>
+    <?php generer_vague("#0099ff", "#fff"); ?>
 
     <?php get_footer(); ?>
 </body>
