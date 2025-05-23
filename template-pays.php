@@ -65,14 +65,6 @@ Template Name: Pays
     </div>
 </section>
 
-<?php
-function enqueue_destination_script() {
-    wp_enqueue_script('destination-js', get_template_directory_uri() . '/js/destination.js', array(), null, true);
-}
-add_action('wp_enqueue_scripts', 'enqueue_destination_script');
-?>
-
-
 
 <?php generer_vague2("#84eaff ", "#d9f9ff"); ?>
 <?php get_footer(); ?>
