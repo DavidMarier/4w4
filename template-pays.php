@@ -2,7 +2,7 @@
 /*
 Template Name: Pays
 */
-//evenement
+//pays
 ?>
 <?php get_header(); ?>
     <section class="populaire">
