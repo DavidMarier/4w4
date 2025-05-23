@@ -4,11 +4,6 @@ Template Name: Pays
 */
 //evenement
 ?>
-<style>
-    body {
-        background-color: #d9f9ff;
-    }
-</style>
 <?php get_header(); ?>
     <section class="populaire">
         <div class="global">
@@ -30,7 +25,7 @@ Template Name: Pays
     </section>
 <?php generer_vague("#84eaff ", "#d9f9ff "); ?>
 
-<section class="menu-pays">
+<section class="menu-pays" style="background-color: #d9f9ff;">
     <div class="global">
         <ul class="menu-pays__liste">
         <?php
@@ -59,8 +54,23 @@ Template Name: Pays
                 </li>
         <?php endforeach; ?>
         </ul>
+
+        <section class="destinations">
+            <div class="global destinations__contenu">
+                <p></p>
+            </div>
+        </section>
+
+
     </div>
 </section>
+
+<?php
+function enqueue_destination_script() {
+    wp_enqueue_script('destination-js', get_template_directory_uri() . '/js/destination.js', array(), null, true);
+}
+add_action('wp_enqueue_scripts', 'enqueue_destination_script');
+?>
 
 
 
